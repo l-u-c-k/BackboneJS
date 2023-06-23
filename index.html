@@ -10,9 +10,30 @@
     <title>Document</title>
   </head>
   <body>
+    <!-- <div id="container"></div>
+    <ul id="songs"></ul> -->
+    <div class="container">
+      <div id="venues-container"></div>
+      <div id="map-container">
+        <span id="venue-name"></span>
+      </div>
+    </div>
+
     <script src="js/lib/jquery-min.js"></script>
     <script src="js/lib/underscore-min.js"></script>
     <script src="js/lib/backbone-min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.4.0/backbone-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.1/underscore-min.js"></script> -->
+    <script id="songTemplate" type="text/html">
+      <!-- //this is for rendering values dynamically whatever we place between this angle brackets will be evaluated at runtime and inserted into th markup as string -->
+      <%= title %>
+      <button>Listen</button>
+      <% if (plays > 1000){ %>
+      <span class="popular">Popular</span>
+
+      <% } %>
+    </script>
     <script src="js/main.js"></script>
   </body>
 </html>
